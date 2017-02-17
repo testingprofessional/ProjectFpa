@@ -27,7 +27,7 @@ public class TextHandlerDirection {
 				System.out.println("You can't go any more North");
 			}
 			break;
-		case "E" : if (widthMap <= 1) {
+		case "E" : if (widthMap <= 2) {
 			widthMap++;
 			currentLocation = map.map[widthMap][hightMap];
 			showLocation();
@@ -38,7 +38,7 @@ public class TextHandlerDirection {
 				System.out.println("You can't go any more East");
 			}
 			break;
-		case "S" : if (hightMap <= 1) {
+		case "S" : if (hightMap <= 2) {
 			hightMap++;
 			currentLocation = map.map[widthMap][hightMap];
 			showLocation();

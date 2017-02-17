@@ -26,6 +26,9 @@ public class TextHandler {
 							break;
 		case "DROP APPLE" : objectHandler.getItemOutFromArraylist(Main.apple);
 							break;
+		case "EAT APPLE" :  Main.player.eatApple();
+							objectHandler.getItemOutOfMap(Main.apple);
+							break;
 		case "GET SWORD" : objectHandler.putInArraylist(Main.sword);
 							break;
 		case "DROP SWORD" : objectHandler.getItemOutFromArraylist(Main.sword);
@@ -34,10 +37,12 @@ public class TextHandler {
 							break;
 		case "DROP COIN" : objectHandler.getItemOutFromArraylist(Main.coin);
 							break;
+		case "INV" 		 :
 		case "INVENTORY" : for(Object val : objectHandler.objects) {
 							System.out.println(val.getName());
 							}
 							break;
+		case "STAT"   :
 		case "STATUS" : System.out.println("Health:" + Main.player.getHealth() + " - Power:" + Main.player.getPower());
 							break;
 		case "PUNCH WIZZARD" : Fighting.fight("PUNCH", "WIZZARD");

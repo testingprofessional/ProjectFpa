@@ -45,5 +45,15 @@ public class Creature {
 		public void setLuck(int number) {
 			this.luck = number;
 		}
-
+		
+		public void eatApple() {
+			boolean isAppleInInv = objectHandler.checkIfObjectIsInInv(Main.apple);
+			
+			if(isAppleInInv) {
+					this.health += 20;
+					System.out.println("Your health is increased with 20");
+				} else {
+					System.out.println("There is no apple in your inventory");
+			}
+		}
 }

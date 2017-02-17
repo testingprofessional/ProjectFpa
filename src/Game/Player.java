@@ -5,7 +5,7 @@ public class Player extends Creature {
 	private String name;
 	private int health; // 0 - 100
 	private int power; // 0 - 50
-	private int luck; // 0 - 5
+	private int luck; // 0 - 10
 
 	Player(String sort, String name, int health, int power, int luck) {
 		super(sort, name, health, power, luck);

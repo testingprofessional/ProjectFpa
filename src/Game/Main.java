@@ -1,7 +1,5 @@
 package Game;
 
-import java.util.Scanner;
-
 public class Main {
 	static boolean running = true;
 	static Player player = new Player("Player", "Me", 100, 50, 5);

@@ -78,7 +78,9 @@ public class TextHandlerDirection {
 		
 		if(map.roomGotCreature(currentLocation) != "") {
 			System.out.println("There is a " + map.roomGotCreature(currentLocation) + " in this room !!!");
-		} else if(map.roomGotObject(currentLocation) != "") {
+		} 
+		
+		if(map.roomGotObject(currentLocation) != "") {
 			System.out.println("There is a " + map.roomGotObject(currentLocation) + " in this room !!!");
 		}
 	}

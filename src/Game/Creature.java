@@ -46,6 +46,14 @@ public class Creature {
 			this.luck = number;
 		}
 		
+		public void setPowerUp(int powerUp) {
+			this.power = this.power + powerUp;
+		}
+		
+		public void setPowerDown(int powerDown) {
+			this.power = this.power - powerDown;
+		}
+		
 		public void eatApple() {
 			boolean isAppleInInv = objectHandler.checkIfObjectIsInInv(Main.apple);
 			

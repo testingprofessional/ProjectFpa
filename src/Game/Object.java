@@ -12,4 +12,8 @@ public class Object {
 	public String getName() {
 		return this.name;
 	}
+	
+	public int getPower() {
+		return this.power;
+	}
 }

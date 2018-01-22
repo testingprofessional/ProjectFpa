@@ -9,6 +9,10 @@ public class objectHandler {
 		if(item.getName().equals(Map.roomGotObject(TextHandlerDirection.currentLocation))){
 			objects.add(item);
 			Map.releaseObject(TextHandlerDirection.currentLocation);
+			if(item.getName().equals("sword")) {
+				Main.player.setPowerUp(item.getPower());
+				System.out.println("Your power increased with: " +item.getPower() + ". Your total power is now: " + Main.player.getPower());
+			}
 			System.out.println("You put a " + item.getName() + " in your inventory");
 		} else {
 			System.out.println("There is no " + item.getName() + " over here");
@@ -19,6 +23,10 @@ public class objectHandler {
 		if(!Map.checkGotObject(TextHandlerDirection.currentLocation)) {
 			objects.remove(item); 
 			Map.putObjectInRoom(TextHandlerDirection.currentLocation, item);
+			if(item.getName().equals("sword")) {
+				Main.player.setPowerDown(item.getPower());
+				System.out.println("Your power decreased with: " +item.getPower() + ". Your total power is now: " + Main.player.getPower());
+			}
 			System.out.println("You dropped your " + item.getName() + " in this room");
 		} else {
 			System.out.println("There is allready a " + Map.roomGotObject(TextHandlerDirection.currentLocation) + " over here. It's full"); 

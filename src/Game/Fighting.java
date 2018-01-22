@@ -19,19 +19,19 @@ public class Fighting {
 			return;
 		}
 		switch(action) {
-		case "PUNCH": fight(enemyToFight);
-						System.out.println("Health you: " + Main.player.getHealth());
-						System.out.println("Health " + enemyToFight.getSort() + ": " + enemyToFight.getHealth());
-					  break;
-		case "KICK": fight(enemyToFight);
-						System.out.println("Health you: " + Main.player.getHealth());
-						System.out.println("Health " + enemyToFight.getSort() + ": " + enemyToFight.getHealth());
-					  break;
-		case "MAGIC": fight(enemyToFight);
-						System.out.println("Health you: " + Main.player.getHealth());
-						System.out.println("Health " + enemyToFight.getSort() + ": " + enemyToFight.getHealth());
-					  break;
-		default:      break;
+			case "PUNCH": fight(enemyToFight);
+							System.out.println("Health you: " + Main.player.getHealth());
+							System.out.println("Health " + enemyToFight.getSort() + ": " + enemyToFight.getHealth());
+						  break;
+			case "KICK": fight(enemyToFight);
+							System.out.println("Health you: " + Main.player.getHealth());
+							System.out.println("Health " + enemyToFight.getSort() + ": " + enemyToFight.getHealth());
+						  break;
+			case "MAGIC": fight(enemyToFight);
+							System.out.println("Health you: " + Main.player.getHealth());
+							System.out.println("Health " + enemyToFight.getSort() + ": " + enemyToFight.getHealth());
+						  break;
+			default:      break;
 		}
 	}
 
@@ -43,6 +43,7 @@ public class Fighting {
 		int tempEnemy = enemyHealth - randomNumberEnemy;
 		int tempPlayer = playerHealth - randomNumberPlayer;
 		String sort = enemy.getSort();
+		
 		if(tempEnemy <= 0) {
 			System.out.println("The " + sort + " is dead");
 			Map.releaseCreature(TextHandlerDirection.currentLocation);
@@ -53,6 +54,8 @@ public class Fighting {
 			case "Bloodelf": TextHandlerDirection.bloodelfTrue = false;
 							break;
 			case "Wizzard": TextHandlerDirection.wizzardTrue = false;
+							Map.putObjectInRoom(TextHandlerDirection.currentLocation, Main.coin);
+							System.out.println("The Wizzard dropped a little coin out of his pocket");
 							break;
 			default:   		break;
 			}

@@ -22,20 +22,20 @@ public class TextHandler {
 		case "S" :
 		case "W" : 	texthandlerDirection.directionHandler(input);
 					break;
-		case "GET APPLE" : objectHandler.putInArraylist(Main.apple);
+		case "GET APPLE" :  objectHandler.putInArraylist(Main.apple);
 							break;
 		case "DROP APPLE" : objectHandler.getItemOutFromArraylist(Main.apple);
 							break;
 		case "EAT APPLE" :  Main.player.eatApple();
 							objectHandler.getItemOutOfMap(Main.apple);
 							break;
-		case "GET SWORD" : objectHandler.putInArraylist(Main.sword);
+		case "GET SWORD" :  objectHandler.putInArraylist(Main.sword);
 							break;
 		case "DROP SWORD" : objectHandler.getItemOutFromArraylist(Main.sword);
 							break;
-		case "GET COIN" : objectHandler.putInArraylist(Main.coin);
+		case "GET COIN" :   objectHandler.putInArraylist(Main.coin);
 							break;
-		case "DROP COIN" : objectHandler.getItemOutFromArraylist(Main.coin);
+		case "DROP COIN" :  objectHandler.getItemOutFromArraylist(Main.coin);
 							break;
 		case "INV" 		 :
 		case "INVENTORY" : for(Object val : objectHandler.objects) {
@@ -43,13 +43,13 @@ public class TextHandler {
 							}
 							break;
 		case "STAT"   :
-		case "STATUS" : System.out.println("Health:" + Main.player.getHealth() + " - Power:" + Main.player.getPower());
+		case "STATUS" : 	System.out.println("Health:" + Main.player.getHealth() + " - Power:" + Main.player.getPower());
 							break;
 		case "PUNCH WIZZARD" : Fighting.fight("PUNCH", "WIZZARD");
 							break;
 		case "PUNCH BLOODELF" : Fighting.fight("PUNCH", "BLOODELF");
 							break;
-		case "KICK WIZZARD" : Fighting.fight("KICK", "WIZZARD");
+		case "KICK WIZZARD"  : Fighting.fight("KICK", "WIZZARD");
 							break;
 		case "KICK BLOODELF" : Fighting.fight("KICK", "BLOODELF");
 							break;
@@ -57,8 +57,10 @@ public class TextHandler {
 							break;
 		case "MAGIC BLOODELF" : Fighting.fight("MAGIC", "BLOODELF");
 							break;
-		default  :  System.out.println("Please choose another input like: GET, DROP, INVENTORY, STATUS, PUNCH, KICK, MAGIC, EXIT, WHERE, N, E, S or W");
-					break;
+		case "LOOK"           : texthandlerDirection.checkCreaturesAndObjects();
+							break;
+		default  :  		System.out.println("Please choose another input like: GET, DROP, INVENTORY, STATUS, PUNCH, KICK, MAGIC, EXIT, WHERE, LOOK, N, E, S or W");
+							break;
 		}	
 	}
 }
